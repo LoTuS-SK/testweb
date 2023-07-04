@@ -19,7 +19,8 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 app.use("/api",useRouter)
-app.use(express.static(path.resolve(__dirname,"html")))
+app.use(express.static(path.resolve(__dirname,"html/build/")))
+//app.use(express.static("../backendbot/html/build/index.html"))
 
 app.get("/mail",(req,res)=>{
     res.end(weburl)
@@ -84,10 +85,4 @@ bot.on('message', async (msg) => {
 
   
 
-    
-
-
-
-
-
-  app.listen(PORT,()=>console.log(`server been started in ${PORT}`))
+app.listen(PORT,()=>console.log(`server been started in ${PORT}`))
