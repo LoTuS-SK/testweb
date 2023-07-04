@@ -12,7 +12,7 @@ const weburl = "https://zesty-cassata-92288c.netlify.app/form"
 
 const useRouter = require("./routes/user.routes")
 
-const PORT = process.env.PORT || 5050
+const PORT = 80
 //const __dirname = path.resolve()
 
 const app = express()
